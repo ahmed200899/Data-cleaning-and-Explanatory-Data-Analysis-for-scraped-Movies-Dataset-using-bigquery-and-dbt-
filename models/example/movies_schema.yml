@@ -2,9 +2,18 @@
 version: 2
 
 sources:
-    - name: moviesdataset
+    - name: dbt_movies
       tables: 
-        - name: movies-raw-table
+        - name: raw_crew_cast
+          columns:
+              - name: id
+                description: "The primary key for this table"
+                tests:
+                    - unique
+                    - not_null
+              - name: crew
+              - name: cast
+        - name: raw_movies
           columns:
               - name: id
                 description: "The primary key for this table"
@@ -12,21 +21,7 @@ sources:
                     - unique
                     - not_null
               - name: belongs_to_collection
-              - name: adult
               - name: budget
-              - name: homepage
-              - name: imdb_id
-              - name: original_language
-              - name: original_title
-              - name: overview
-              - name: release_date
-              - name: runtime
-              - name: spoken_languages
-              - name: status
-              - name: tagline
-              - name: video             
-              - name: poster_path
-              - name: production_countries
               - name: genres
               - name: popularity
               - name: production_companies
@@ -35,5 +30,4 @@ sources:
               - name: title
               - name: vote_average
               - name: vote_count
-
 
