@@ -13,7 +13,7 @@ sources:
                     - not_null
               - name: crew
               - name: cast
-        - name: raw_movies
+        - name: raw-movies
           columns:
               - name: id
                 description: "The primary key for this table"
