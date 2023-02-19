@@ -1,6 +1,6 @@
 # Data-cleaning-and-Explanatory-Data-Analysis-for-scraped-Movies-Dataset-using-BigQuery-and-DBT-
 Doing Data cleaning for scraped messy IMDb dataset then doing Exploratory and Explanatory data analysis to answer questions and extract insights about the movies and series.
-#The questions: 
+# The questions: 
   ## The best and the worst movies...
     ### Highest Revenue
     ### Highest Budget
