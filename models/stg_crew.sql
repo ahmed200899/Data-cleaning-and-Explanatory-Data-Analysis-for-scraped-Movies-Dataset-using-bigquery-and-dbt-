@@ -5,7 +5,7 @@ FROM  (
     select 
         h.id as movie_id,name as Director 
     from
-        {{ source('dbt_movies', 'raw_crew_cast') }},UNNEST(crew) 
+        {{ source('dbt_movies', 'raw_crew_cast') }},UNNEST(SPLIT(crew,',')) 
     where 
         job =  "Director" 
     limit           58999
