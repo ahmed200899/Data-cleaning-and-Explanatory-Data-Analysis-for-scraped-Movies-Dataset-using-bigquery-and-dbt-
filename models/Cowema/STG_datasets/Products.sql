@@ -1,6 +1,4 @@
-{{ config(materialized='table') }}
-  select 
-    	*
-  from
-     {{ source('Cowema', 'Products') }}
-  limit 562475
+SELECT *
+FROM 
+    {{ source('Cowema', 'Products') }}
+limit 10000

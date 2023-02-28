@@ -3,4 +3,4 @@
     user_id,product_id,date
   from
      {{ source('Cowema', 'Pro_shares') }}
-  limit 562475
+  limit 10000
