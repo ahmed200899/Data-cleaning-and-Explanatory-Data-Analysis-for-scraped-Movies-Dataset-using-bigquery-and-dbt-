@@ -6,7 +6,7 @@ from
         SAFE_CAST(release_date AS datetime) as release_date,  JSON_VALUE(belongs_to_collection,'$.name') as belongs_to_collection, 
         genres, title,SAFE_CAST(vote_average AS FLOAT64) as vote_average, SAFE_CAST(vote_count AS FLOAT64) as vote_count, 
         SAFE_CAST(budget AS FLOAT64)/1000000   as budget 
-    from {{ source('movies', 'raw_movies') }}
+    from {{ source('dbt_movies', 'raw_movies') }}
     limit 45467   
     )
 where  vote_count>= 160 and revenue <>0 and budget <>0

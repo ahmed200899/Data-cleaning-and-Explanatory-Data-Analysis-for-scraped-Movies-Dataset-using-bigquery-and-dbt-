@@ -1,0 +1,95 @@
+version: 2
+sources:
+  - name: Cowema
+    tables:
+      - name: Clicks_data
+        columns:
+          - name: int64_field_0
+          - name: user_id
+          - name: product_id
+          - name: clicked_from
+          - name: in_app_event_name
+          - name: clicked_at
+      - name: Orders
+        columns:
+          - name: int64_field_0
+          - name: order_id
+          - name: product_id
+          - name: user_id
+          - name: order_date
+          - name: product_seller_id
+      - name: Pro_likes
+        columns:
+          - name: int64_field_0
+          - name: user_id
+          - name: product_id
+          - name: date
+      - name: Pro_shares
+        columns:
+          - name: int64_field_0
+          - name: user_id
+          - name: product_id
+          - name: date
+      - name: Products 
+        columns:
+          - name: product_id
+          - name: name
+          - name: user_id
+          - name: category
+          - name: city_name
+          - name: is_sold
+      - name: Users
+        columns:
+          - name: _
+          - name: user_id
+          - name: city
+      - name: Views
+        columns:
+          - name: _
+          - name: user_id
+          - name: product_idn
+          - name: view_at
+      - name: Views_data
+        columns:
+          - name: _
+          - name: user_id
+          - name: product_id
+          - name: clicked_from
+          - name: in_app_event_name
+          - name: clicked_at
+      - name: boosts
+        columns:
+          - name: int64_field_0
+          - name: user_id
+          - name: boost_id
+          - name: pricing_plan_id
+          - name: product_id
+
+  - name: dbt_movies
+    tables: 
+      - name: raw_crew_cast
+        columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+          - name: crew
+          - name: cast
+      - name: raw_movies
+        columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+          - name: belongs_to_collection
+          - name: budget
+          - name: genres
+          - name: popularity
+          - name: production_companies
+          - name: release_date
+          - name: revenue
+          - name: title
+          - name: vote_average
+          - name: vote_count
