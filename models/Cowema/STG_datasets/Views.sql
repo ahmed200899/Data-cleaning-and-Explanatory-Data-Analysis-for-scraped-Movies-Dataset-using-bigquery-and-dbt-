@@ -4,4 +4,4 @@
   from
      {{ source('Cowema', 'Views') }}
   order by product_idn,user_id
-  limit 562475
+limit 500000

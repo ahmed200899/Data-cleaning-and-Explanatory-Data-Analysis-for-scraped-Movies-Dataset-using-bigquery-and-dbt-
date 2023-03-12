@@ -1,12 +1,12 @@
  {{ config(materialized='table') }}
 select 
-    Distinct product_id 
+     product_id 
 from {{ source('Cowema', 'Products') }}
 where 
     product_id 
      in
     (
-        select Distinct product_id
+        select  product_id
         from {{ source('Cowema', 'Pro_likes') }}
         limit 10000
     )
@@ -14,7 +14,7 @@ where
     product_id 
      in
     (
-        select Distinct product_id
+        select  product_id
         from {{ source('Cowema', 'Pro_shares') }}
         limit 10000
     )

@@ -64,6 +64,10 @@ sources:
           - name: boost_id
           - name: pricing_plan_id
           - name: product_id
+      - name: shared_liked_products
+        columns:
+          - name: product_id
+
 
   - name: dbt_movies
     tables: 
