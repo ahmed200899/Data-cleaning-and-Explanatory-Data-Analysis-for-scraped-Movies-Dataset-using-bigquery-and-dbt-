@@ -2,6 +2,11 @@ version: 2
 sources:
   - name: Cowema
     tables:
+      - name: m
+        columns:
+          - name: user_id
+          - name: product_id	
+          - name: pro_rate     
       - name: Clicks_data
         columns:
           - name: int64_field_0
